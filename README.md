@@ -1,0 +1,1 @@
+This is an attempt to port Grove Guardian, a Ludum Dare submission by Natelargo, to linux. This should be easy enough considering the fact that it uses SFML and the codebase is small. I haven't contacted him (her? I wouldn't know) so this is nothing official.
