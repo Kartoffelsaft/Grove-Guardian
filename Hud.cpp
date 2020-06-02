@@ -3,6 +3,7 @@
 #include "PlayState.h"
 #include "TreeInfo.h"
 #include "Ruin.h"
+#include <cmath>
 
 void Hud::init() {
 	dayBarSprite.setTexture(state->loadTexture("Resource/Image/DayBar.png"));

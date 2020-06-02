@@ -4,6 +4,7 @@
 #include "TreeInfo.h"
 #include <algorithm>
 #include <cctype>
+#include <cmath>
 
 #include <iostream>
 
@@ -299,7 +300,7 @@ void Tree::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 
 void Tree::buildTreeFromImage(std::string filename) {
-	filename.erase(std::remove_if(filename.begin(), filename.end(), std::isspace), filename.end());
+	filename.erase(std::remove_if(filename.begin(), filename.end(), [](unsigned char x){return std::isspace(x);}), filename.end());
 	sprite.setTexture(state->loadTexture("Resource/Image/Tree/" + filename + ".png"));
 	totalFrames = sprite.getTexture()->getSize().x / sprite.getTexture()->getSize().y;
 	sprite.setTextureRect(sf::IntRect(0, 0, sprite.getTexture()->getSize().x / totalFrames, sprite.getTexture()->getSize().y));

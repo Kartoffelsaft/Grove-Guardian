@@ -3,6 +3,8 @@
 #include "Tree.h"
 #include "Ruin.h"
 
+#include <cmath>
+
 PlayState::PlayState() {
 
 }
@@ -596,7 +598,7 @@ void PlayState::updateParticles(sf::Time elapsed) {
 	auto particle = particles.begin();
 	while (particle != particles.end()) {
 		particle->lifetime -= elapsed.asSeconds();
-		particle->velocity *= std::powf(0.2, elapsed.asSeconds());
+		particle->velocity *= std::pow(0.2f, elapsed.asSeconds());
 		particle->position += particle->velocity * elapsed.asSeconds();
 		if (particle->lifetime <= 0) {
 			particle = particles.erase(particle);

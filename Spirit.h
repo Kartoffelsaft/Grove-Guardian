@@ -2,6 +2,7 @@
 
 #include "Object.h"
 #include "GridObject.h"
+#include <memory>
 #include <SFML/Graphics.hpp>
 
 class Spirit : public Object {

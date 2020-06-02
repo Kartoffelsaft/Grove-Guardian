@@ -1,6 +1,7 @@
 #include "Fairy.h"
 
 #include "PlayState.h"
+#include <cmath>
 
 void Fairy::init() {
 	bodySprite.setTexture(state->loadTexture("Resource/Image/Fairy.png"));

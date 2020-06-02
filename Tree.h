@@ -4,6 +4,7 @@
 #include "Leaf.h"
 #include "Spirit.h"
 #include "TreeInfo.h"
+#include <memory>
 #include <SFML/Graphics.hpp>
 
 class Tree : public GridObject {

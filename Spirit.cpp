@@ -2,6 +2,7 @@
 
 #include "PlayState.h"
 #include <algorithm>
+#include <cmath>
 
 void Spirit::init() {
 	if (state->day >= 4 && std::rand() % 5 == 0) {
